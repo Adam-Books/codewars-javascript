@@ -24,14 +24,14 @@ Link:
 
 // Solution 1:
 const isPrime = (n) => {
-  let s = Math.sqrt(n);
+  let s = n ** 0.5;
   if (n <= 1) return false;
   if (n <= 3) return true;
   if (n % 2 == 0 || n % 3 == 0) return false;
   for (let i = 5; i <= s; i = i + 6) {
     if (n % i == 0 || n % (i + 2) == 0) return false;
   }
-  return n == 2 ? true : n == 4 ? false : true;
+  return true;
 };
 
 // Solution 2:
