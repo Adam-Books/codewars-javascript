@@ -25,4 +25,6 @@ Link:
 // Solutions:
 
 // Solution 1:
-const pointsPer48 = (p, m) => m ? +((p * (48 / m)).toFixed(1)) : 0
+const pointsPer48 = (p, m) => m ? +((p * (48 / m)).toFixed(1)) : 0;
+
+
