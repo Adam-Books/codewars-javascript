@@ -13,7 +13,7 @@ Description:
 
   In mathematics, a square number or perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself.
 
-  The tests will always use some integral number, so don't worry about that in dynamic typed languages.
+  The tests will always use some integral number, so don't worry about that in dynamically typed languages.
 
   Examples
   -1  =>  false
@@ -31,4 +31,11 @@ Links:
 // Solutions:
 
 // Solution 1:
+var isSquare = n => Number.isInteger(Math.sqrt(n));
+
+// Solution 2:
+const isSquare = n => Math.sqrt(n) % 1 === 0;
+
+// Solution 3:
+const isSquare = n => (n**(1/2)) % 1 === 0;
 
