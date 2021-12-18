@@ -21,3 +21,14 @@ Link:
 
 // Solutions:
 // Solution 1:
+const duplicateCount = t => {
+  return t.toLowerCase().split('').filter((val, i, arr) => {
+    return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
+  }).length;
+};
+
+// Solution 2:
+function duplicateCount(text) {
+  return new Set(text.toLowerCase().match(/(.)(?=.*\1)/gi)).size;
+}
+
