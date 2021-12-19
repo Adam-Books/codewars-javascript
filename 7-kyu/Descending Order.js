@@ -17,4 +17,9 @@ Link:
 */
 
 // Solutions:
+
 // Solution 1:
+const descendingOrder = n => +(String(n).split('').sort((a, b) => b - a).join(''));
+
+// Solution 2:
+const descendingOrder = n => +n.toString().split('').sort().reverse().join('');
