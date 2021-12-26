@@ -13,3 +13,11 @@ Link:
 
 // Solutions:
 // Solution 1:
+const findShort = s => s.split(' ').sort((a, b) => a.length - b.length)[0].length;
+
+// Solution 2:
+const findShort = s => Math.min(...s.split(" ").map(s => s.length));
+
+// Solution 3:
+const findShort = s => s.split(' ').sort((a, b) => b.length - a.length).pop().length;
+
