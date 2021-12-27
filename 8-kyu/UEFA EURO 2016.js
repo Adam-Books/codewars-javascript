@@ -24,3 +24,13 @@ const uefaEuro2016 = (teams, scores) => {
       : `At match ${teams[0]} - ${teams[1]}, ${teams[1]} won!`)
 }
 
+// Solution 2:
+const uefaEuro2016 = (c, s) => `At match ${c[0]} - ${c[1]}, ${s[0] == s[1] ? 
+      "commands played draw." : (s[0] > s[1] ? c[0] : c[1]) + ' won!'}`;
+
+// Solution 3:
+function uefaEuro2016([t1,t2], [s1,s2]){
+  return `At match ${t1} - ${t2}, `+(s1!=s2?`${s1>s2?t1:t2} won!`:`teams played draw.`)
+}
+
+
