@@ -21,3 +21,22 @@ Link:
 
 // Solutions:
 // Solution 1:
+const findOutlier = i => i.filter(e => e % 2 == 0).length >= 2 ?
+      (i.filter(k => k % 2))[0] : i.filter(e => e % 2 == 0)[0];
+
+// Solution 2:
+function findOutlier(ints) {
+  return ints.slice(0, 3).reduce((a, b) => b % 2 === 0? a : a + 1, 0) >= 2?
+    ints.find(i => i % 2 === 0) : ints.find(i => i % 2 !== 0);
+}
+
+// Solution 3:
+const findOutlier = n => {
+   let odd = n.filter(x => x % 2 != 0), even = n.filter(x => x % 2 == 0);
+   return odd.length == 1 ? odd.pop() : even.pop();
+}
+
+
+
+
+
