@@ -24,7 +24,28 @@ Link:
 
 // Solutions:
 // Solution 1:
+const numberOfPairs = gloves => {
+  let pairs = 0;
+  let pureGloves = [...new Set(gloves)];
+  let l = pureGloves.length;
+  for (let i = 0; i < l; i++) {
+   let k = parseInt(gloves.filter(e => e == pureGloves[i]).length / 2);
+    pairs += k; 
+  }
+  return pairs;
+};
 
+// Solution 2:
+const numberOfPairs = gloves => {
+  var arr = Array.from(new Set(gloves));
+  return arr.reduce((a,b) => a + Math.floor(gloves.join('').match(new RegExp(b, 'g')).length / 2), 0);
+};
+
+// Solution 3:
+numberOfPairs = a => [...new Set(a)].map(b => a.join``.split(b).length - 1).reduce((a, b) => a + (b >> 1), 0);
+
+// Solution 4:
+const numberOfPairs = gloves => [...new Set(gloves)].reduce( (acc,el) => acc + ~~(gloves.filter(x => x === el).length / 2), 0);
 
 
 
