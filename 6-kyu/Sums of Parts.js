@@ -36,5 +36,28 @@ Link:
 
 // Solutions:
 // Solution 1:
+const partsSums = l => {
+  let newSum = l.reduce((a, b) => a + b, 0);
+  let result = [newSum];
+  let length = l.length;
+  for(let i = 0; i < length; i++) {
+    newSum -= l[i];
+    result.push(newSum);
+  }  
+  return result;
+};
+
+// Solution 2:
+function partsSums(ls) {
+    ls.unshift(0);
+    let sum = ls.reduce((p, c) => p + c, 0);
+    return ls.map(v => sum = sum - v);
+}
+
+// Solution 3:
+const partsSums = ls => ls.reduceRight((res, el) => (res.push(res[res.length - 1] + el), res), [0]).reverse();
+
+
+
 
 
