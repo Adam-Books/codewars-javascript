@@ -19,7 +19,6 @@
 */
 
 // Solutions:
-
 // Solution 1:
 function howManyDalmatians (number) {
   
