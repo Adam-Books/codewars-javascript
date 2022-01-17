@@ -17,4 +17,7 @@ Link:
 // Solution 1:
 const getASCII = c => c.charCodeAt()
 
+// Solution 2:
+
+
 
