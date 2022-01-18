@@ -15,9 +15,9 @@ Link:
 
 // Solutions:
 // Solution 1:
-const getASCII = c => c.charCodeAt()
+const getASCII = c => c.charCodeAt();
 
 // Solution 2:
-
+const getASCII = c => c.charCodeAt(0);
 
 
