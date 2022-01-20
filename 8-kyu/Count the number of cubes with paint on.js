@@ -24,6 +24,5 @@ Link:
 
 // Solutions:
 // Solution 1:
-
-
+var countSquares = c => c ? 6 * c**2 + 2 : 1
 
