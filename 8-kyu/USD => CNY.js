@@ -22,6 +22,6 @@ Link:
 
 // Solutions:
 // Solution 1:
-
+const usdcny = u => `${(u*6.75).toFixed(2)} Chinese Yuan`;
 
 
