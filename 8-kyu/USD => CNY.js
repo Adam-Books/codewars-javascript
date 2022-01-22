@@ -24,4 +24,9 @@ Link:
 // Solution 1:
 const usdcny = u => `${(u*6.75).toFixed(2)} Chinese Yuan`;
 
+// Solution 2:
+function usdcny(usd) {
+  let con = usd * 6.75
+  return `${con.toFixed(2)} Chinese Yuan`
+}
 
