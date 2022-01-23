@@ -17,5 +17,7 @@ var a = "code";
 var b = "wa.rs";
 var name = a + b;
 
+// Solution 2:
+let name = 'codewa.rs';
 
 
