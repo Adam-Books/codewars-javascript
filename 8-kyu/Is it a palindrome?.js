@@ -13,6 +13,6 @@ Link:
 
 // Solutions:
 // Solution 1:
-
+const isPalindrome = x => x.toLowerCase() == x.toLowerCase().split('').reverse().join('');
 
 
